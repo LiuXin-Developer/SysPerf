@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="轻量级跨平台系统性能监控工具 — CPU、内存、网速、GPU 实时仪表盘，内网可访问，单文件部署。">
+    <title>系统性能监控 · System Performance Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a class="nav-brand" href="#">SysPerf</a>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#features">功能</a></li>
+            <li><a href="#showcase">效果展示</a></li>
+            <li><a href="#vibe">Vibe Coding</a></li>
+            <li><a href="#tech">技术栈</a></li>
+            <li><a href="#start">快速开始</a></li>
+            <li><a class="nav-cta" id="githubLink" href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-tag">跨平台 · 轻量级 · 单文件部署</p>
+                <h1>系统性能监控</h1>
+                <p class="hero-desc">
+                    运行一个可执行文件，即可在浏览器中以仪表盘实时查看
+                    <strong>CPU、内存、网速、GPU</strong> 四项核心指标。
+                    内网任意设备可访问，手机扫码即用。
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#start">立即开始</a>
+                    <a class="btn btn-ghost" href="#showcase">查看效果</a>
+                </div>
+                <div class="hero-badges">
+                    <span>Windows</span>
+                    <span>macOS Intel</span>
+                    <span>macOS Apple Silicon</span>
+                    <span>~6MB 单文件</span>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="image/effect2.png" alt="手机横屏查看性能监控仪表盘" loading="eager">
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">核心功能</h2>
+            <p class="section-sub">一个 exe / 二进制文件，零依赖开箱即用</p>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>四项核心指标</h3>
+                    <p>CPU 使用率、内存占用、网络上下行速率、GPU 利用率，每秒 SSE 实时推送，仪表盘平滑刷新。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>内网任意访问</h3>
+                    <p>自动选取真实局域网 IP，过滤虚拟网卡。启动时控制台打印访问地址与二维码，手机扫码直达。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>全端响应式</h3>
+                    <p>PC、手机竖屏、手机横屏均一屏展示无滚动条。支持默认全屏与一键切换，Canvas 高清自适应渲染。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🪶</div>
+                    <h3>极致轻量</h3>
+                    <p>Go 静态编译单文件约 6MB，运行时内存 10–20MB。前端内嵌 go:embed，无需外部文件或联网。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🖥️</div>
+                    <h3>跨平台 GPU</h3>
+                    <p>Windows 通过 PDH 性能计数器；macOS 通过 ioreg，Intel 与 Apple Silicon 均支持，无需 sudo。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>灵活配置</h3>
+                    <p>支持自定义端口与采集间隔。<code>-port 9000 -interval 2000</code> 一行命令即可调整。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">效果展示</h2>
+            <p class="section-sub">从桌面到移动端，随时随地掌握系统状态</p>
+            <div class="showcase-grid">
+                <figure class="showcase-item showcase-hero">
+                    <img src="image/effect2.png" alt="桌面游戏场景下手机横屏监控" loading="lazy">
+                    <figcaption>桌面场景 · 手机横屏实时监控</figcaption>
+                </figure>
+                <figure class="showcase-item">
+                    <img src="image/effect1.jpg" alt="移动端横屏仪表盘界面" loading="lazy">
+                    <figcaption>移动端横屏 · 一屏四指标无滚动</figcaption>
+                </figure>
+                <figure class="showcase-item">
+                    <img src="image/effect3.png" alt="手持手机查看性能数据" loading="lazy">
+                    <figcaption>随时查看 · 内网设备均可访问</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="vibe" class="section">
+        <div class="container">
+            <h2 class="section-title">Vibe Coding</h2>
+            <p class="section-sub">用自然语言对话，从零到可用的完整产品</p>
+
+            <div class="vibe-layout">
+                <div class="vibe-intro">
+                    <p>
+                        本项目全程采用 <strong>Vibe Coding</strong> 方式开发 —— 不写冗长规格书，
+                        而是用<strong>自然语言</strong>与 AI 结对编程，在对话中逐步明确需求、做技术选型、
+                        迭代优化，最终交付可运行的跨平台可执行文件与完整文档。
+                    </p>
+                    <ul class="vibe-points">
+                        <li>需求即对话：一句话描述目标，AI 给出架构方案并确认</li>
+                        <li>迭代式演进：每轮反馈聚焦一个改进点，小步快跑</li>
+                        <li>技术决策共创：Go vs Python、SSE vs WebSocket 等权衡由 AI 分析、人拍板</li>
+                        <li>交付即产品：源码、README、多平台构建、官网一页到位</li>
+                    </ul>
+                </div>
+
+                <div class="vibe-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-step">01</span>
+                        <div class="timeline-body">
+                            <h4>从想法到 MVP</h4>
+                            <p>「写一个 Windows 性能监控 exe，仪表盘展示 CPU/内存/网速/GPU，内网可访问，尽量轻量。」</p>
+                            <span class="timeline-result">→ Go + gopsutil + SSE + go:embed 单文件方案</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">02</span>
+                        <div class="timeline-body">
+                            <h4>体验打磨</h4>
+                            <p>「PC / 移动端 / 横屏都要一屏展示，不要滚动条。」</p>
+                            <span class="timeline-result">→ 100dvh + clamp 弹性布局 + Canvas 高清自适应</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">03</span>
+                        <div class="timeline-body">
+                            <h4>细节完善</h4>
+                            <p>「内网只显示真实 IP，并生成二维码；默认全屏 + 切换按钮。」</p>
+                            <span class="timeline-result">→ 默认路由探测 + qrterminal + Fullscreen API</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">04</span>
+                        <div class="timeline-body">
+                            <h4>跨平台扩展</h4>
+                            <p>「支持 macOS x86 和 ARM，更新 README。」</p>
+                            <span class="timeline-result">→ gpu_darwin.go + 交叉编译 + 文档同步</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-step">05</span>
+                        <div class="timeline-body">
+                            <h4>对外展示</h4>
+                            <p>「生成 GitHub Pages 官网，介绍功能与 Vibe Coding 特性。」</p>
+                            <span class="timeline-result">→ 你正在看的这个页面</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote class="vibe-quote">
+                <p>最好的开发体验，不是写更多代码，而是<strong>说清你想要什么</strong>，然后看着它一步步长出来。</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="tech" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">技术栈</h2>
+            <p class="section-sub">主流、轻量、零 CGO 依赖</p>
+            <div class="tech-grid">
+                <div class="tech-item"><span class="tech-label">语言</span><span>Go</span></div>
+                <div class="tech-item"><span class="tech-label">指标采集</span><span>gopsutil + PDH / ioreg</span></div>
+                <div class="tech-item"><span class="tech-label">Web 服务</span><span>net/http 标准库</span></div>
+                <div class="tech-item"><span class="tech-label">实时推送</span><span>SSE</span></div>
+                <div class="tech-item"><span class="tech-label">前端</span><span>HTML / CSS / JS + Canvas</span></div>
+                <div class="tech-item"><span class="tech-label">资源内嵌</span><span>go:embed</span></div>
+                <div class="tech-item"><span class="tech-label">二维码</span><span>qrterminal</span></div>
+                <div class="tech-item"><span class="tech-label">平台</span><span>Windows · macOS amd64 · macOS arm64</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="start" class="section">
+        <div class="container">
+            <h2 class="section-title">快速开始</h2>
+            <div class="start-grid">
+                <div class="start-block">
+                    <h3>Windows</h3>
+                    <pre><code>.\windowsPerformance.exe</code></pre>
+                    <p>双击运行，控制台显示本机与内网地址及二维码。</p>
+                </div>
+                <div class="start-block">
+                    <h3>macOS</h3>
+                    <pre><code>chmod +x ./sysperf-mac-arm64
+./sysperf-mac-arm64</code></pre>
+                    <p>Apple Silicon 用 arm64，Intel Mac 用 amd64 版本。</p>
+                </div>
+                <div class="start-block">
+                    <h3>自定义参数</h3>
+                    <pre><code>./sysperf -port 9000 -interval 2000</code></pre>
+                    <p>浏览器打开 <code>http://localhost:8080</code> 即可查看仪表盘。</p>
+                </div>
+            </div>
+            <p class="start-note">
+                详细说明请参阅项目
+                <a id="readmeLink" href="https://github.com/" target="_blank" rel="noopener">README.md</a>。
+                可从 GitHub Releases 下载各平台预编译二进制。
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>系统性能监控 · MIT License</span>
+            <span>Built with Vibe Coding</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

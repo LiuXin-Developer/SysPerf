@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统性能监控</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="title-group">
+            <h1>系统性能监控</h1>
+            <button id="fullscreenBtn" class="icon-btn" type="button" title="全屏切换" aria-label="全屏切换">
+                <svg class="icon-enter" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 9V5a1 1 0 0 1 1-1h4" />
+                    <path d="M20 9V5a1 1 0 0 0-1-1h-4" />
+                    <path d="M4 15v4a1 1 0 0 0 1 1h4" />
+                    <path d="M20 15v4a1 1 0 0 1-1 1h-4" />
+                </svg>
+                <svg class="icon-exit" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 4v3a2 2 0 0 1-2 2H4" />
+                    <path d="M15 4v3a2 2 0 0 0 2 2h3" />
+                    <path d="M9 20v-3a2 2 0 0 0-2-2H4" />
+                    <path d="M15 20v-3a2 2 0 0 1 2-2h3" />
+                </svg>
+            </button>
+        </div>
+        <div class="status">
+            <span id="statusDot" class="dot"></span>
+            <span id="statusText">连接中...</span>
+        </div>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <h2>CPU 使用率</h2>
+            <div class="gauge-wrap">
+                <canvas class="gauge" data-metric="cpu" width="220" height="220"></canvas>
+            </div>
+            <div class="sub" id="cpuSub">--</div>
+        </section>
+
+        <section class="card">
+            <h2>内存使用率</h2>
+            <div class="gauge-wrap">
+                <canvas class="gauge" data-metric="mem" width="220" height="220"></canvas>
+            </div>
+            <div class="sub" id="memSub">--</div>
+        </section>
+
+        <section class="card">
+            <h2>GPU 使用率</h2>
+            <div class="gauge-wrap">
+                <canvas class="gauge" data-metric="gpu" width="220" height="220"></canvas>
+            </div>
+            <div class="sub" id="gpuSub">--</div>
+        </section>
+
+        <section class="card">
+            <div class="net-wrap">
+                <div class="net-item">
+                    <div class="net-label">下行 ↓</div>
+                    <div class="net-value" id="netDown">-- KB/s</div>
+                </div>
+                <div class="net-item">
+                    <div class="net-label">上行 ↑</div>
+                    <div class="net-value" id="netUp">-- KB/s</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <span id="updatedAt">等待数据...</span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
