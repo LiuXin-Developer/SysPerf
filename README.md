@@ -1,5 +1,6 @@
 # 系统性能监控
 
+![](./website/image/effect2.png)
 一个轻量级的跨平台系统性能监控工具，支持 **Windows** 与 **macOS（Intel x86_64 与 Apple Silicon ARM 均支持）**。运行单个可执行文件即可启动内置 Web 服务，通过浏览器以**仪表盘**形式实时查看 **CPU、内存、网速、GPU** 等性能数据，内网内任意设备均可访问。
 
 ## 功能特性
